@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রো-ড্যাশবোর্ড | দৈনিক প্রতিচ্ছবি সাংবাদিক পোর্টাল</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', 'Hind Siliguri', sans-serif; background: #0f172a; }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+        .btn-glow { box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); transition: 0.3s; }
+        .btn-glow:hover { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); }
+    </style>
+</head>
+<body class="text-white selection:bg-blue-500">
+
+    <nav class="glass sticky top-0 z-50 py-4 px-8 flex justify-between items-center border-b border-white/10">
+        <div class="text-2xl font-bold italic tracking-tighter">দৈনিক<span class="text-blue-500">প্রতিচ্ছবি</span></div>
+        <div class="space-x-6 hidden md:block">
+            <a href="#" class="hover:text-blue-400 transition">হোম</a>
+            <a href="#" class="hover:text-blue-400 transition">নিউজ</a>
+            <a href="#" class="hover:text-blue-400 transition">সদস্য এলাকা</a>
+        </div>
+        <button class="bg-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">লগইন</button>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6">আপনার ডিজিটাল <span class="gradient-text">সাংবাদিকতা</span> যাত্রা।</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">আধুনিক প্রযুক্তি, আইনি সুরক্ষা এবং মেগা রিওয়ার্ডের সমন্বয়ে দৈনিক প্রতিচ্ছবি দিচ্ছে এক নতুন মাত্রা।</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+                <div class="glass p-8 rounded-3xl border border-blue-500/30">
+                    <h2 class="text-3xl font-bold mb-4">স্বাগতম, সম্মানিত প্রতিনিধি!</h2>
+                    <p class="text-gray-300 mb-6">আপনার অ্যাকাউন্টটি এখন লাইভ মোডে আছে। নিচে দেওয়া আপনার প্রয়োজনীয় কাজের টুলগুলো ব্যবহার করুন।</p>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="https://dailybanglarpraticchabi.com/signin/" class="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-blue-600 transition group">
+                            <i class="fas fa-arrow-right-to-bracket text-2xl mb-2 text-blue-400 group-hover:text-white"></i>
+                            <h3 class="font-bold">ড্যাশবোর্ড লগইন</h3>
+                            <p class="text-xs text-gray-400 group-hover:text-white">নিউজ পাবলিশিং সিস্টেম</p>
+                        </a>
+                        <a href="https://youtube.com/shorts/dZUsdHUQ-Lk?si=iye3dZlnZX5421mk" class="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-red-600 transition group">
+                            <i class="fab fa-youtube text-2xl mb-2 text-red-400 group-hover:text-white"></i>
+                            <h3 class="font-bold">ভিডিও টিউটোরিয়াল</h3>
+                            <p class="text-xs text-gray-400 group-hover:text-white">কীভাবে নিউজ করবেন</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="glass p-6 rounded-3xl">
+                        <h3 class="text-xl font-bold mb-4 text-green-400">🎁 মেগা রিওয়ার্ড</h3>
+                        <p class="text-sm text-gray-300 mb-4">পার্সেল গ্রহণ করলে নিশ্চিত উপহার:</p>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><i class="fas fa-mobile text-blue-500 mr-2"></i> লেটেস্ট স্মার্টফোন</li>
+                            <li><i class="fas fa-camera text-blue-500 mr-2"></i> সাংবাদিক সরঞ্জাম</li>
+                            <li><i class="fas fa-gift text-blue-500 mr-2"></i> বৈশাখী অফার প্যাকেজ</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-600 p-6 rounded-3xl btn-glow shadow-red-900">
+                        <h3 class="text-xl font-bold mb-2">⚠️ জরুরি অ্যাক্টিভেশন</h3>
+                        <p class="text-sm mb-4">আপনার অফিসিয়াল পার্সেলটি দ্রুত সংগ্রহ করুন। এটি আপনার আইডি ও ক্ষমতার চাবিকাঠি।</p>
+                        <button class="bg-white text-red-600 font-bold px-4 py-2 rounded-lg text-sm w-full">পার্সেল গ্রহণ করুন</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-1">
+                <div class="glass rounded-3xl h-[600px] flex flex-col overflow-hidden border border-white/10 shadow-2xl">
+                    <div class="bg-blue-600 p-6 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-lg">প্রতিচ্ছবি AI</h3>
+                            <p class="text-xs opacity-80">২৪/৭ অনলাইন সাপোর্ট</p>
+                        </div>
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <div id="chatBox" class="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar text-sm">
+                        <div class="bg-white/10 p-4 rounded-2xl rounded-bl-none text-gray-200">
+                            আসসালামু আলাইকুম! সম্মানিত প্রতিনিধি, আমি দৈনিক প্রতিচ্ছবি পোর্টালের এআই সহকারী। আপনাকে আজ কীভাবে সাহায্য করতে পারি?
+                        </div>
+                    </div>
+                    <div class="p-4 bg-white/5 border-t border-white/5">
+                        <div class="flex gap-2">
+                            <input id="userInput" type="text" placeholder="প্রশ্ন করুন..." class="flex-1 bg-transparent border border-white/20 rounded-full px-4 py-3 focus:outline-none focus:border-blue-500">
+                            <button onclick="handleChat()" class="bg-blue-600 hover:bg-blue-500 p-3 rounded-full"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // AI Logic Script
+        let step = 0;
+        const chatBox = document.getElementById('chatBox');
+        
+        function addMsg(text, isBot) {
+            const div = document.createElement('div');
+            div.className = `p-4 rounded-2xl ${isBot ? 'bg-white/10 rounded-bl-none text-gray-200' : 'bg-blue-600 rounded-br-none ml-auto text-white'} max-w-[80%]`;
+            div.innerHTML = text;
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function handleChat() {
+            const input = document.getElementById('userInput');
+            if(!input.value) return;
+            addMsg(input.value, false);
+            const userText = input.value.toLowerCase();
+            input.value = '';
+
+            setTimeout(() => {
+                if(step === 0) {
+                    addMsg("আমি আপনাকে সংবাদ আপলোড করতে সাহায্য করতে পারি। ভিডিও টিউটোরিয়ালটি এখানে দেখুন: <a href='https://youtube.com/shorts/dZUsdHUQ-Lk' class='text-blue-400 underline'>ভিডিও গাইড</a> এবং আপনার অ্যাকাউন্টে লগইন করতে এখানে যান: <a href='https://dailybanglarpraticchabi.com/signin/' class='text-blue-400 underline'>লগইন পেজ</a>। আপনার কি আর কোনো প্রশ্ন আছে?", true);
+                    step = 1;
+                } else if(userText.includes('পাঠক') || userText.includes('সমস্যা')) {
+                    addMsg("চিন্তা করবেন না! আপনার অ্যাকাউন্ট স্ট্যাটাস আপডেটের জন্য আপনার মোবাইল নম্বরটি আমাদের এই হোয়াটসঅ্যাপে পাঠান: <b class='text-yellow-400'>01750328870</b>।", true);
+                } else {
+                    addMsg("দৈনিক প্রতিচ্ছবি একটি আধুনিক ও প্রযুক্তি নির্ভর গণমাধ্যম। আমাদের সাথে কাজ করাটা অত্যন্ত গর্বের। আপনার যেকোনো প্রয়োজনে আমি আছি! আরও কিছু জানার আছে?", true);
+                }
+            }, 600);
+        }
+    </script>
+</body>
+      </html>
