@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>নির্দেশিকা ও প্রশ্নোত্তর - দৈনিক প্রতিচ্ছবি</title>
+    <title>Dainik Protichobi: News Upload Tutorial and Details</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Google Fonts for Bengali -->
@@ -21,255 +21,284 @@
         .gradient-brand {
             background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
         }
+        /* Smooth Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
     </style>
 </head>
-<body class="text-gray-800 antialiased">
+<body class="text-gray-800 antialiased selection:bg-red-200">
 
     <!-- Header / Hero Section -->
-    <header class="gradient-brand text-white py-12 px-4 shadow-lg text-center relative overflow-hidden">
+    <header class="gradient-brand text-white py-14 px-4 shadow-xl text-center relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-4xl mx-auto relative z-10">
             <div class="inline-block bg-red-700/50 text-red-200 text-sm px-4 py-1.5 rounded-full font-semibold mb-4 border border-red-500/30">
-                <i class="fa-solid fa-bullhorn mr-1.5 animate-pulse"></i> অফিসিয়াল নির্দেশিকা পোর্টাল
+                <i class="fa-solid fa-shield-halved mr-1.5 animate-pulse"></i> অফিসিয়াল সাংবাদিক নির্দেশিকা পোর্টাল
             </div>
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-wide drop-shadow-sm">দৈনিক প্রতিচ্ছবি</h1>
-            <p class="text-xl md:text-2xl font-medium text-red-100 mb-2">সম্মানিত গণমাধ্যম কর্মীদের জন্য গুরুত্বপূর্ণ নির্দেশনা ও প্রশ্নোত্তর</p>
-            <p class="text-sm md:text-base text-red-200/90 max-w-xl mx-auto mt-4 border-t border-red-700 pt-4">
-                আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ। দৈনিক প্রতিচ্ছবির পক্ষ থেকে আপনাকে আন্তরিক স্বাগতম। নিচে উল্লেখিত নির্দেশনাবলী দয়া করে মনোযোগ সহকারে পড়ুন ও বুঝুন।
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-wide drop-shadow-md">দৈনিক প্রতিচ্ছবি</h1>
+            <p class="text-xl md:text-2xl font-medium text-red-100 mb-2">সহজ সংবাদ আপলোড গাইড ও কর্মী সহায়তা সেল</p>
+            <p class="text-sm md:text-base text-red-200/90 max-w-xl mx-auto mt-4 border-t border-red-700/50 pt-4">
+                আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ। দৈনিক প্রতিচ্ছবি পোর্টালে আপনার কাজকে সহজ ও ত্রুটিমুক্ত করতে এই ইন্টারক্টিভ নির্দেশিকাটি তৈরি করা হয়েছে।
             </p>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <main class="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-        <!-- Left 2 Columns: Guidelines & FAQs -->
-        <div class="lg:col-span-2 space-y-12">
+        <!-- Left 2 Columns: Steps & FAQs -->
+        <div class="lg:col-span-2 space-y-8">
             
-            <!-- Section 1: How to Upload News -->
-            <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                <div class="flex items-center space-x-3 space-x-reverse mb-6 border-b border-gray-100 pb-4">
+            <!-- Section 1: Visual Steps Guide -->
+            <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-100">
+                <div class="flex items-center space-x-3 space-x-reverse mb-8 border-b border-slate-100 pb-4">
                     <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-600 text-xl shadow-inner">
-                        <i class="fa-solid fa-newspaper"></i>
+                        <i class="fa-solid fa-map-signs"></i>
                     </div>
-                    <h2 class="text-2xl font-bold text-gray-950">কীভাবে সংবাদ আপলোড করবেন?</h2>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-950">সংবাদ আপলোড করার সহজ ধাপসমূহ</h2>
+                        <p class="text-gray-400 text-xs mt-0.5">১ থেকে ৫ নম্বর ধাপ অনুসরণ করুন</p>
+                    </div>
                 </div>
                 
-                <!-- Steps Container -->
-                <div class="relative border-r-2 border-gray-100 mr-4 pr-6 space-y-8">
+                <!-- Steps Flow -->
+                <div class="relative border-r-2 border-slate-100 mr-4 pr-6 space-y-8">
                     <!-- Step 1 -->
                     <div class="relative">
                         <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">১</span>
-                        <h3 class="font-bold text-lg text-gray-950 mb-1">অ্যাকাউন্টে লগইন</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-3">আপনার নিবন্ধিত মোবাইল নম্বর ও তথ্য ব্যবহার করে পোর্টালে লগইন সম্পন্ন করুন।</p>
-                        <a href="https://dainikprotichobi.com/login/" target="_blank" class="inline-flex items-center text-sm font-semibold text-red-600 bg-red-50 hover:bg-red-100 px-4 py-2 rounded-lg transition-colors group">
-                            লগইন/নিবন্ধন লিংক <i class="fa-solid fa-arrow-up-right-from-square mr-2 text-xs transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"></i>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">অ্যাকাউন্টে লগইন করুন</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-2">ডানপাশের কুইক প্যানেল অথবা নিচের লিংকে ক্লিক করে আপনার নিবন্ধিত মোবাইল নম্বর ও পাসওয়ার্ড দিয়ে ড্যাশবোর্ডে প্রবেশ করুন।</p>
+                        <a href="https://dainikprotichobi.com/login/" target="_blank" class="inline-flex items-center text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-lg transition-colors group">
+                            লগইন পেজ ওপেন করুন <i class="fa-solid fa-arrow-up-right-from-square mr-1.5 text-[10px]"></i>
                         </a>
                     </div>
                     
                     <!-- Step 2 -->
                     <div class="relative">
                         <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">২</span>
-                        <h3 class="font-bold text-lg text-gray-950 mb-1">পদবী নিশ্চিতকরণ</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">লগইন হওয়ার পর আপনার অ্যাকাউন্ট ভেরিফাইড থাকলে ড্যাশবোর্ডে স্পষ্ট অক্ষরে <span class="bg-green-50 text-green-700 font-semibold px-2 py-0.5 rounded border border-green-200">"গণমাধ্যম কর্মী"</span> লেখা দেখতে পাবেন।</p>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">ভেরিফিকেশন স্ট্যাটাস চেক</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">লগইন করার সাথে সাথেই উপরে আপনার প্রোফাইলে গ্রিন সিগন্যালে <span class="bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded border border-emerald-200">"গণমাধ্যম কর্মী"</span> ব্যাজটি দেখতে পাবেন।</p>
                     </div>
 
                     <!-- Step 3 -->
                     <div class="relative">
                         <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">৩</span>
-                        <h3 class="font-bold text-lg text-gray-950 mb-1">রাইটার অপশন অ্যাক্সেস</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">সফলভাবে ভেরিফিকেশন চেক পাসের পর নিচে <span class="font-semibold text-gray-950">"আর্টিকেল লেখক"</span> এবং অন্যান্য মেনু প্রদর্শিত হবে।</p>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">রাইটার মোড অ্যাক্টিভেশন</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">স্ট্যাটাস ভেরিফাইড থাকলে স্ক্রিনের বামপাশে বা নিচে <span class="font-semibold text-gray-950">"আর্টিকেল লেখক"</span> বাটন এবং অপশনগুলো স্বয়ংক্রিয়ভাবে আনলক হবে।</p>
                     </div>
 
                     <!-- Step 4 -->
                     <div class="relative">
                         <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">৪</span>
-                        <h3 class="font-bold text-lg text-gray-950 mb-1">আর্টিকেল লিখন ও প্রকাশ</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">নির্ধারিত <span class="text-red-600 font-semibold">"আর্টিকেল লিখুন"</span> বাটনে ক্লিক করে সমস্ত প্রয়োজনীয় তথ্য ইনপুট দিন এবং নীতিমালা মেনে সংবাদ প্রকাশ করুন।</p>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">সংবাদ সাবমিট করুন</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">নির্ধারিত <span class="text-red-600 font-semibold">"আর্টিকেল লিখুন"</span> ফরমে গিয়ে সংবাদের শিরোনাম, বিবরণ ও ছবি দিয়ে সাবমিট সম্পন্ন করুন।</p>
                     </div>
 
                     <!-- Step 5 -->
                     <div class="relative">
                         <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">৫</span>
-                        <h3 class="font-bold text-lg text-gray-950 mb-1">ফটো কার্ড ও অতিরিক্ত ফিচার</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">সংবাদটি সফলভাবে প্রকাশ হওয়ার পর আপনি আকর্ষণীয় ডিজিটাল ফটো কার্ড জেনারেট করাসহ অন্যান্য প্রিমিয়াম সুবিধা উপভোগ করতে পারবেন।</p>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">ডিজিটাল ফটো কার্ড ডাউনলোড</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">পোস্ট সফল হলে সিস্টেম আপনার নিউজের একটি অটোমেটিক প্রিমিয়াম ফটো কার্ড তৈরি করবে, যা আপনি সোশ্যাল মিডিয়ায় শেয়ার করতে পারবেন।</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 2: Video Tutorial -->
+            <!-- Section 2: In-App Embedded Video Tutorial Box -->
             <section class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden">
                 <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-red-600/10 rounded-full blur-2xl"></div>
                 <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="text-center md:text-right">
                         <div class="flex items-center justify-center md:justify-start space-x-2 space-x-reverse mb-2 text-red-500">
-                            <i class="fa-solid fa-circle-play text-xl animate-pulse"></i>
-                            <span class="text-xs uppercase font-bold tracking-wider">ভিডিও গাইড</span>
+                            <i class="fa-solid fa-play-css text-xl animate-bounce"></i>
+                            <span class="text-xs uppercase font-bold tracking-wider text-red-400">ইন-অ্যাপ ভিডিও গাইড</span>
                         </div>
-                        <h2 class="text-xl md:text-2xl font-bold mb-2">সম্পূর্ণ ভিডিও টিউটোরিয়াল</h2>
-                        <p class="text-slate-400 text-sm max-w-md">সংবাদ আপলোডের পুরো প্রক্রিয়াটি প্র্যাক্টিক্যালি দেখতে ও সহজে বুঝতে আমাদের শর্টস টিউটোরিয়ালটি দেখে নিন।</p>
+                        <h2 class="text-xl md:text-2xl font-bold mb-1">ভিডিও টিউটোরিয়াল (লাইভ প্লেয়ার)</h2>
+                        <p class="text-slate-400 text-sm max-w-md">ইউটিউবে না গিয়ে সরাসরি এই পেজেই সম্পূর্ণ প্র্যাক্টিক্যাল টিউটোরিয়ালটি এক ক্লিকে দেখে নিন।</p>
                     </div>
-                    <a href="https://youtube.com/shorts/Uk0rzZGjrpU?si=CPjZgRr2T9gQDAR0" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 inline-flex items-center whitespace-nowrap">
-                        <i class="fa-brands fa-youtube text-lg mr-2"></i> ভিডিওটি দেখুন
-                    </a>
+                    <button onclick="openVideoModal()" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 inline-flex items-center whitespace-nowrap cursor-pointer">
+                        <i class="fa-solid fa-play mr-2"></i> ভিডিওটি এখানেই দেখুন
+                    </button>
                 </div>
             </section>
 
-            <!-- Section 3: FAQs -->
+            <!-- Section 3: Smart FAQ Accodion -->
             <section class="space-y-4">
                 <div class="flex items-center space-x-3 space-x-reverse mb-6">
                     <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-600 text-xl shadow-inner">
                         <i class="fa-solid fa-circle-question"></i>
                     </div>
-                    <h2 class="text-2xl font-bold text-gray-950">প্রায় জিজ্ঞাসিত প্রশ্ন (FAQ)</h2>
+                    <h2 class="text-2xl font-bold text-gray-950">সাধারণ জিজ্ঞাসা ও উত্তরসমূহ</h2>
                 </div>
 
-                <!-- FAQ Accordion Container -->
                 <div class="space-y-3">
-                    <!-- Q1 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">১.</span> দৈনিক কয়টি সংবাদ প্রকাশ করা যাবে?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">একজন গণমাধ্যম কর্মী প্রতিদিন সর্বোচ্চ ২-৩টি সংবাদ প্রকাশ করতে পারবেন। তবে জাতীয় বা বিশেষ পরিস্থিতির প্রয়োজন অনুযায়ী কর্তৃপক্ষ যেকোনো সময় এই নীতিমালা পরিবর্তন বা পরিবর্ধন করতে পারে।</p>
+                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-4 transition-all">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base flex items-start"><span class="text-red-600 ml-2 font-black">১.</span> দৈনিক সর্বোচ্চ কয়টি নিউজ পোর্টাল আপলোড করা যাবে?</h4>
+                        <p class="text-gray-600 text-xs md:text-sm mt-2 mr-5 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed">একজন সম্মানিত গণমাধ্যম কর্মী হিসেবে আপনি প্রতিদিন সর্বোচ্চ ২ থেকে ৩টি নিউজ প্রকাশ করতে পারবেন। বিশেষ সংবাদের ক্ষেত্রে সংখ্যা পরিবর্তনযোগ্য।</p>
                     </div>
-                    <!-- Q2 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">২.</span> আমার অ্যাকাউন্ট এখনো ভেরিফাই হয়নি, কেন?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">চিন্তার কোনো কারণ নেই। সাধারণত তথ্য জমা দেওয়ার ২৪ থেকে ৭২ ঘণ্টার মধ্যে আমাদের ব্যাক-এন্ড টিম যাচাইবাছাই সম্পন্ন করে অ্যাকাউন্ট স্বয়ংক্রিয়ভাবে ভেরিফাই করে দেয়। ভেরিফিকেশন শেষ হলেই আপনি সংবাদ সাবমিট করতে পারবেন।</p>
+                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-4 transition-all">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base flex items-start"><span class="text-red-600 ml-2 font-black">২.</span> নতুন অ্যাকাউন্ট খোলার পর ভেরিফাই হতে কত সময় লাগে?</h4>
+                        <p class="text-gray-600 text-xs md:text-sm mt-2 mr-5 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed">সাধারণত ২৪ থেকে ৭২ ঘণ্টার মধ্যে আমাদের এডমিন প্যানেল আপনার দেওয়া তথ্য যাচাই করে অ্যাকাউন্টটি অটো-ভেরিফাই করে দেবে।</p>
                     </div>
-                    <!-- Q3 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৩.</span> পাসওয়ার্ড ভুলে গেলে আমার করণীয় কী?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">পাসওয়ার্ড পুনরুদ্ধার করতে ওয়েবসাইটের নিচে দেওয়া আমাদের অফিসিয়াল ই-মেইল ঠিকানায় আপনার নিবন্ধিত মোবাইল নম্বর, নাম ও আইডির বিবরণসহ একটি মেইল করুন। সিকিউরিটি টিম যাচাই শেষে দ্রুত আপনাকে নতুন অ্যাক্সেস কোড প্রদান করবে।</p>
+                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-4 transition-all">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base flex items-start"><span class="text-red-600 ml-2 font-black">৩.</span> পাসওয়ার্ড হারিয়ে ফেললে কীভাবে উদ্ধার করব?</h4>
+                        <p class="text-gray-600 text-xs md:text-sm mt-2 mr-5 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed">পাসওয়ার্ড ভুলে গেলে নিচে অফিশিয়াল ইমেইল বাটনে ক্লিক করে আপনার নাম ও ফোন নম্বর লিখে মেইল করুন, টেকনিক্যাল টিম অ্যাকাউন্ট রিসেট করে দেবে।</p>
                     </div>
-                    <!-- Q4 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৪.</span> কোনো টেকনিক্যাল সমস্যায় পড়লে তাৎক্ষণিক সহযোগিতা কীভাবে পাব?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">যেকোনো সিস্টেম বা টেকনিক্যাল ত্রুটির মুখোমুখি হলে স্ক্রিনশটসহ সমস্যার বিস্তারিত লিখে আমাদের অফিসিয়াল ই-মেইলে পাঠান। আমাদের টেকনিক্যাল সাপোর্ট টিম অতি দ্রুত বিষয়টির স্থায়ী সমাধান নিশ্চিত করবে।</p>
-                    </div>
-                    <!-- Q5 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৫.</span> WhatsApp-এ রেসপন্স পেতে দেরি হওয়ার কারণ কী?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">আমাদের WhatsApp নম্বরটি সরাসরি সেন্ট্রাল ওয়েবসাইটের সাথে যুক্ত। নিয়মিত নিরাপত্তাজনিত আপডেট, গেটওয়ে সীমাবদ্ধতা এবং একসাথে অসংখ্য বার্তার চাপ থাকার কারণে চ্যাটে তাৎক্ষণিক উত্তর দেওয়া সম্ভব হয় না। তাই যেকোনো গুরুত্বপূর্ণ বা অফিশিয়াল প্রয়োজনে সরাসরি ই-মেইল ব্যবহার করা সবচেয়ে নির্ভরযোগ্য মাধ্যম।</p>
-                    </div>
-                    <!-- Q6 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৬.</span> সংবাদ সংগ্রহ করতে গিয়ে স্থানীয় ফিল্ডে সমস্যায় পড়লে কী করণীয়?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">যেহেতু আপনি <b>দৈনিক প্রতিচ্ছবি</b> পরিবারে নতুন, তাই মাঠপর্যায়ে তথ্য সংগ্রহের ক্ষেত্রে শতভাগ সরকারি ও প্রাতিষ্ঠানিক নিয়ম-নীতিমালা কঠোরভাবে মেনে চলুন। যেকোনো ঝুঁকিপূর্ণ বা স্পর্শকাতর ও প্রশাসনিক নিউজ কভার করার আগে অতিরিক্ত সতর্কতা অবলম্বন করুন। আমরা পরামর্শ দেব—জরুরি সহায়তার স্বার্থে আপনি যত দ্রুত সম্ভব আপনার স্থানীয় প্রেসক্লাবের সদস্যপদ গ্রহণ করুন। যেকোনো অনাকাঙ্ক্ষিত পরিস্থিতিতে স্থানীয় প্রেসক্লাব ও আইন-শৃঙ্খলা রক্ষাকারী বাহিনীর আইনি সাহায্য নিন। অত্যন্ত গুরুতর সমস্যা হলে মূল অফিসে ই-মেইলের মাধ্যমে লিখিত রিপোর্ট করুন। মনে রাখবেন, আপনার পেশাদারী নিরাপত্তার বিষয়টি আমাদের কাছে সবচেয়ে অগ্রাধিকার পায়।</p>
-                    </div>
-                    <!-- Q7 -->
-                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
-                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৭.</span> দৈনিক প্রতিচ্ছবির ভবিষ্যৎ পরিকল্পনা কী?</h4>
-                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">আমরা খুব শীঘ্রই আমাদের মূল পোর্টালে একটি ডেডিকেটেড সেকশনে সংস্থার মূল উদ্দেশ্য, ভিশন, সাংবাদিকতার সম্পাদকীয় নীতিমালা, Privacy Policy এবং বিস্তারিত Terms & Conditions উন্মুক্ত করতে যাচ্ছি যা আমাদের সাংবাদিকতাকে আরও স্বচ্ছ করবে।</p>
+                    <div class="bg-white rounded-xl border border-slate-100 shadow-sm p-4 transition-all">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base flex items-start"><span class="text-red-600 ml-2 font-black">৪.</span> মাঠপর্যায়ে তথ্য সংগ্রহের ক্ষেত্রে কোনো আইনি জটিলতা বা ঝুঁকি তৈরি হলে করণীয় কী?</h4>
+                        <p class="text-gray-600 text-xs md:text-sm mt-2 mr-5 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed">যেহেতু আপনি <b>দৈনিক প্রতিচ্ছবি</b> পরিবারে নতুন, তাই মাঠপর্যায়ে তথ্য সংগ্রহের ক্ষেত্রে শতভাগ সরকারি ও প্রাতিষ্ঠানিক নিয়ম-নীতিমালা কঠোরভাবে মেনে চলুন। যেকোনো ঝুঁকিপূর্ণ বা স্পর্শকাতর ও প্রশাসনিক নিউজ কভার করার আগে অতিরিক্ত সতর্কতা অবলম্বন করুন। আমরা পরামর্শ দেব—জরুরি সহায়তার স্বার্থে আপনি যত দ্রুত সম্ভব আপনার স্থানীয় প্রেসক্লাবের সদস্যপদ গ্রহণ করুন। যেকোনো অনাকাঙ্ক্ষিত পরিস্থিতিতে স্থানীয় প্রেসক্লাব ও আইন-শৃঙ্খলা রক্ষাকারী বাহিনীর আইনি সাহায্য নিন। অত্যন্ত গুরুতর সমস্যা হলে মূল অফিসে ই-মেইলের মাধ্যমে লিখিত রিপোর্ট করুন। মনে রাখবেন, আপনার পেশাদারী নিরাপত্তার বিষয়টি আমাদের কাছে সবচেয়ে অগ্রাধিকার পায়।</p>
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- Right 1 Column: Important Rules & Meta info -->
+        <!-- Right 1 Column: Easy Login Form & Info -->
         <div class="space-y-6">
             
-            <!-- Professional Guidelines Card -->
-            <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200/60 shadow-sm">
-                <h3 class="font-bold text-amber-950 text-lg mb-4 flex items-center"><i class="fa-solid fa-triangle-exclamation text-amber-600 ml-2"></i> সাংবাদিকতার নৈতিক নীতিমালা</h3>
-                <ul class="space-y-3 text-amber-900 text-sm leading-relaxed">
-                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> সর্বদা সঠিক ও নির্ভরযোগ্য সোর্সের তথ্যের ভিত্তিতে সংবাদ রচনা করুন।</li>
-                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> হলুদ সাংবাদিকতা, বিভ্রান্তিকর হেডলাইন বা কপিরাইট লঙ্ঘনকারী কোনো কন্টেন্ট প্রকাশ থেকে সম্পূর্ণ বিরত থাকুন।</li>
-                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> সকল প্রকার সংবাদ প্রকাশের ক্ষেত্রে গণমাধ্যম নীতিমালা ও দেশের প্রচলিত ডিজিটাল নিরাপত্তা ও প্রেস আইন মেনে চলুন।</li>
-                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> ভুল বা আপত্তিজনক তথ্যের প্রমাণ মিললে কর্তৃপক্ষ যেকোনো সংবাদ পর্যালোচনা, সম্পাদনা বা অপসারণের পূর্ণ অধিকার সংরক্ষণ করে।</li>
-                </ul>
+            <!-- Quick Integrated Login Form -->
+            <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-md">
+                <div class="text-center mb-5">
+                    <div class="w-11 h-11 bg-red-100 rounded-full flex items-center justify-center text-red-600 mx-auto mb-2 text-lg">
+                        <i class="fa-solid fa-lock-open"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-950 text-md">কুইক লগইন প্যানেল</h3>
+                    <p class="text-gray-400 text-xs">আপনার রিপোর্টার অ্যাকাউন্ট অ্যাক্সেস করুন</p>
+                </div>
+                <form action="https://dainikprotichobi.com/login/" target="_blank" method="GET" class="space-y-3">
+                    <div>
+                        <label class="text-xs font-semibold text-gray-600 block mb-1">নিবন্ধিত মোবাইল নম্বর</label>
+                        <input type="tel" placeholder="01XXXXXXXXX" class="w-full text-sm bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:border-red-600 transition-colors text-right">
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-3 rounded-xl transition-all shadow-md cursor-pointer">
+                        লগইন পেজে যান <i class="fa-solid fa-chevron-left mr-1"></i>
+                    </button>
+                </form>
             </div>
 
-            <!-- AI Helper Promo Box -->
-            <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
-                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-xl mx-auto mb-3">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-                <h3 class="font-bold text-gray-950 text-md mb-1">কিছুই বুঝতে পারছেন না?</h3>
-                <p class="text-gray-500 text-xs mb-4">প্রথমে আমাদের ভিডিও গাইডলাইনটি ভালো করে দেখুন। এরপরও জটিলতা থাকলে ডানপাশের চ্যাটবটের সাহায্য নিন।</p>
+            <!-- Rules & Ethics Card -->
+            <div class="bg-amber-50/60 rounded-2xl p-6 border border-amber-200/50 shadow-sm">
+                <h3 class="font-bold text-amber-950 text-md mb-3 flex items-center"><i class="fa-solid fa-triangle-exclamation text-amber-600 ml-2"></i> পেশাদারী নির্দেশনা</h3>
+                <ul class="space-y-2.5 text-amber-900 text-xs leading-relaxed">
+                    <li class="flex items-start"><i class="fa-solid fa-circle text-[6px] text-amber-600 ml-2 mt-2"></i> সঠিক ও সত্য তথ্যের ভিত্তিতে সংবাদ প্রকাশ করুন।</li>
+                    <li class="flex items-start"><i class="fa-solid fa-circle text-[6px] text-amber-600 ml-2 mt-2"></i> ভুয়া, বিভ্রান্তিকর বা কপিরাইট লঙ্ঘনকারী নিউজ সম্পূর্ণ নিষিদ্ধ।</li>
+                    <li class="flex items-start"><i class="fa-solid fa-circle text-[6px] text-amber-600 ml-2 mt-2"></i> সকল ক্ষেত্রে সাংবাদিকতার নীতি ও দেশের প্রচলিত আইন মানুন।</li>
+                </ul>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 px-4 border-t border-slate-800 text-center text-sm mt-12">
-        <p class="text-white font-medium mb-2">দৈনিক প্রতিচ্ছবি</p>
-        <p class="text-xs mb-4">সত্যের পথে, বস্তুনিষ্ঠ সংবাদ প্রকাশে প্রতিশ্রুতিবদ্ধ।</p>
-        <p class="text-xs text-slate-500">&copy; 2026 দৈনিক প্রতিচ্ছবি. অল রাইটস রিজার্ভড।</p>
+    <footer class="bg-slate-900 text-slate-400 py-10 px-4 text-center text-sm border-t border-slate-800">
+        <p class="text-white font-medium mb-1">দৈনিক প্রতিচ্ছবি</p>
+        <p class="text-xs text-slate-500 mb-4">সত্যের পথে, বস্তুনিষ্ঠ সংবাদ প্রকাশে প্রতিশ্রুতিবদ্ধ।</p>
+        <a href="mailto:support@dainikprotichobi.com" class="inline-flex items-center text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-2 rounded-lg transition-colors border border-slate-700">
+            <i class="fa-solid fa-envelope ml-2 text-red-500"></i> অফিশিয়াল ইমেইল করুন
+        </a>
     </footer>
 
-    <!-- ================= CHAT SYSTEM WIDGET ================= -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <!-- Chat Toggle Button -->
-        <button id="chatToggleBtn" class="w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-105 cursor-pointer relative group">
-            <i id="chatIcon" class="fa-solid fa-comments text-xl transition-transform duration-300"></i>
-            <span class="absolute -top-1 -left-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
-        </button>
-
-        <!-- Chat Window Container -->
-        <div id="chatWindow" class="hidden absolute bottom-18 right-0 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col transition-all duration-300 transform scale-95 origin-bottom-right">
-            <!-- Chat Header -->
-            <div class="gradient-brand p-4 text-white flex items-center justify-between">
-                <div class="flex items-center space-x-3 space-x-reverse">
-                    <div class="relative">
-                        <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">DP</div>
-                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-red-800"></span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm">প্রতিচ্ছবি অ্যাসিস্ট্যান্ট</h4>
-                        <p class="text-[10px] text-red-200 flex items-center"><i class="fa-solid fa-circle text-[6px] text-green-400 ml-1"></i> অনলাইন (অটোমেটেড)</p>
-                    </div>
-                </div>
-                <button id="closeChatBtn" class="text-white/70 hover:text-white text-sm cursor-pointer p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+    <!-- ================= IN-APP VIDEO PLAYER MODAL ================= -->
+    <div id="videoModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 rounded-2xl w-full max-w-sm md:max-w-md aspect-[9/16] overflow-hidden shadow-2xl relative border border-slate-800 flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-3 bg-slate-950 text-white flex items-center justify-between border-b border-slate-800">
+                <span class="text-xs font-bold text-slate-300"><i class="fa-brands fa-youtube text-red-600 ml-1"></i> নিউজ আপলোড টিউটোরিয়াল</span>
+                <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white cursor-pointer px-2 py-0.5"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
-
-            <!-- Chat Area (Messages Display) -->
-            <div id="chatMessages" class="p-4 flex-1 h-72 overflow-y-auto space-y-3 bg-slate-50 text-xs md:text-sm">
-                <!-- Welcome Message from System -->
-                <div class="flex items-start space-x-2 space-x-reverse">
-                    <div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-robot"></i></div>
-                    <div class="bg-white p-3 rounded-xl rounded-tr-none shadow-sm border border-gray-100 max-w-[85%] text-gray-700 leading-relaxed">
-                        আসসালামু আলাইকুম! <b>দৈনিক প্রতিচ্ছবি</b> সাপোর্ট অ্যাসিস্ট্যান্টে আপনাকে স্বাগতম। আপনার সুবিধার্থে নিচের কুইক অপশনগুলো তৈরি করা হয়েছে। যেকোনো একটিতে ক্লিক করুন:
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Action Interactive Buttons -->
-            <div class="p-3 bg-white border-t border-gray-100 grid grid-cols-1 gap-2">
-                <button onclick="handleBotAction('login')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-gray-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
-                    <span><i class="fa-solid fa-right-to-bracket text-red-600 ml-2"></i> পোর্টালে লগইন করতে চাই</span>
-                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
-                </button>
-                <button onclick="handleBotAction('video')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-gray-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
-                    <span><i class="fa-brands fa-youtube text-red-600 ml-2"></i> ভিডিও টিউটোরিয়াল দেখতে চাই</span>
-                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
-                </button>
-                <button onclick="handleBotAction('issue')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-gray-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
-                    <span><i class="fa-solid fa-circle-exclamation text-red-600 ml-2"></i> পাসওয়ার্ড/টেকনিক্যাল সমস্যা</span>
-                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
-                </button>
-            </div>
-            
-            <!-- Bottom Footer Note -->
-            <div class="bg-slate-50 px-4 py-2 text-[10px] text-center text-gray-400 border-t border-gray-100">
-                যেকোনো জরুরি প্রয়োজনে অফিসিয়াল ই-মেইল করুন।
+            <!-- Video Iframe Container -->
+            <div class="flex-1 bg-black relative">
+                <iframe id="tutorialVideo" class="w-full h-full" src="" title="Dainik Protichobi Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript code for Chat Widget Functionality -->
+    <!-- ================= AUTO CHAT WIDGET SYSTEM ================= -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <!-- Toggle Button -->
+        <button id="chatToggleBtn" class="w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-105 cursor-pointer relative">
+            <i id="chatIcon" class="fa-solid fa-comments text-xl"></i>
+            <span class="absolute top-0 left-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white animate-ping"></span>
+        </button>
+
+        <!-- Window -->
+        <div id="chatWindow" class="hidden absolute bottom-18 right-0 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col origin-bottom-right transition-transform">
+            <!-- Header -->
+            <div class="gradient-brand p-4 text-white flex items-center justify-between">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold">DP</div>
+                    <div>
+                        <h4 class="font-bold text-xs md:text-sm">প্রতিচ্ছবি ডিজিটাল অ্যাসিস্ট্যান্ট</h4>
+                        <p class="text-[10px] text-red-200 flex items-center"><i class="fa-solid fa-circle text-[5px] text-emerald-400 ml-1"></i> অটো-হেল্প সিস্টেম</p>
+                    </div>
+                </div>
+                <button id="closeChatBtn" class="text-white/70 hover:text-white cursor-pointer"><i class="fa-solid fa-xmark text-md"></i></button>
+            </div>
+
+            <!-- Messages Screen -->
+            <div id="chatMessages" class="p-4 flex-1 h-64 overflow-y-auto space-y-3 bg-slate-50 text-xs md:text-sm">
+                <div class="flex items-start space-x-2 space-x-reverse">
+                    <div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-[10px] shrink-0"><i class="fa-solid fa-robot"></i></div>
+                    <div class="bg-white p-3 rounded-xl rounded-tr-none shadow-sm border border-slate-100 max-w-[85%] text-gray-700 leading-relaxed">
+                        আসসালামু আলাইকুম! কোনো বিষয়ে সমস্যা হচ্ছে? নিচে আপনার কাঙ্ক্ষিত অপশনটি সিলেক্ট করুন, সিস্টেম স্বয়ংক্রিয়ভাবে আপনাকে সাহায্য করবে।
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interative Action Buttons -->
+            <div class="p-3 bg-white border-t border-slate-100 grid grid-cols-1 gap-2">
+                <button onclick="handleBotAction('login')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-slate-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
+                    <span><i class="fa-solid fa-right-to-bracket text-red-600 ml-1.5"></i> ১. পোর্টালে কুইক লগইন করব</span>
+                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
+                </button>
+                <button onclick="handleBotAction('video')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-slate-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
+                    <span><i class="fa-solid fa-circle-play text-red-600 ml-1.5"></i> ২. পেজের ভেতরেই ভিডিও গাইড দেখব</span>
+                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
+                </button>
+                <button onclick="handleBotAction('email')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-slate-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
+                    <span><i class="fa-solid fa-envelope text-red-600 ml-1.5"></i> ৩. অন্যান্য সমস্যা (ইমেইল সাপোর্ট)</span>
+                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core App Logic Configurations Scripts -->
     <script>
         const chatToggleBtn = document.getElementById('chatToggleBtn');
         const chatWindow = document.getElementById('chatWindow');
         const closeChatBtn = document.getElementById('closeChatBtn');
         const chatIcon = document.getElementById('chatIcon');
         const chatMessages = document.getElementById('chatMessages');
+        const videoModal = document.getElementById('videoModal');
+        const tutorialVideo = document.getElementById('tutorialVideo');
 
-        // Toggle chat UI visibility open/close
+        // Embedded YouTube shorts link converted to embed format for inside webpage player
+        const EMBED_VIDEO_URL = "https://www.youtube.com/embed/Uk0rzZGjrpU?autoplay=1&rel=0";
+
+        // In-App Video Player Triggers
+        function openVideoModal() {
+            tutorialVideo.src = EMBED_VIDEO_URL;
+            videoModal.classList.remove('hidden');
+        }
+
+        function closeVideoModal() {
+            videoModal.classList.add('hidden');
+            tutorialVideo.src = ""; // Stops playback upon closing
+        }
+
+        // Chat Box Toggles
         chatToggleBtn.addEventListener('click', () => {
-            const isHidden = chatWindow.classList.contains('hidden');
-            if (isHidden) {
+            if (chatWindow.classList.contains('hidden')) {
                 chatWindow.classList.remove('hidden');
-                setTimeout(() => chatWindow.classList.remove('scale-95', 'opacity-0'), 10);
                 chatIcon.classList.replace('fa-comments', 'fa-chevron-down');
             } else {
                 closeChat();
@@ -286,63 +315,42 @@
             chatIcon.classList.replace('fa-chevron-down', 'fa-comments');
         }
 
-        // Handle automated chat workflows
-        function handleBotAction(type) {
-            let userText = "";
-            let botResponse = "";
-            let redirectUrl = "";
+        // Smart Automations Framework
+        function handleBotAction(actionType) {
+            let userPrompt = "";
+            let botReply = "";
+            let triggerTask = null;
 
-            if (type === 'login') {
-                userText = "আমি পোর্টালে লগইন করতে চাই।";
-                botResponse = "নিচের লিংকে ক্লিক করে সরাসরি আপনার নিবন্ধিত নম্বর দিয়ে লগইন করুন। অ্যাকাউন্ট ভেরিফাইড হলে সংবাদ আপলোডের অপশন পেয়ে যাবেন।";
-                redirectUrl = "https://dainikprotichobi.com/login/";
-            } else if (type === 'video') {
-                userText = "আমি সংবাদ প্রকাশের সম্পূর্ণ ভিডিও টিউটোরিয়াল দেখতে চাই।";
-                botResponse = "সংবাদ আপলোড ও ফটো কার্ড জেনারেশনের সম্পূর্ণ প্র্যাক্টিক্যাল প্রসেসটি ইউটিউব শর্টস লিংকে দেওয়া আছে। এখনই ভিডিওটি ওপেন করা হচ্ছে...";
-                redirectUrl = "https://youtube.com/shorts/Uk0rzZGjrpU?si=CPjZgRr2T9gQDAR0";
-            } else if (type === 'issue') {
-                userText = "আমার পাসওয়ার্ড বা টেকনিক্যাল সমস্যা হচ্ছে।";
-                botResponse = "নিরাপত্তাজনিত কারণে পাসওয়ার্ড বা ভেরিফিকেশনের যেকোনো সমস্যার জন্য আমাদের অফিসিয়াল ই-মেইলে (যা ওয়েবসাইটের নিচে ফুটারে যুক্ত আছে) সরাসরি মেইল করুন। মেইলে আপনার আইডি বা নিবন্ধিত ফোন নম্বর উল্লেখ করতে ভুলবেন না।";
+            if (actionType === 'login') {
+                userPrompt = "আমি এখনই পোর্টালে লগইন করতে চাই।";
+                botReply = "খুব ভালো! আপনার সুবিধার্থে ডানপাশের কুইক লগইন প্যানেলে ফরমটি যুক্ত করা হয়েছে, অথবা মূল সাইটে যেতে <a href='https://dainikprotichobi.com/login/' target='_blank' class='text-red-600 underline font-bold'>এখানে ক্লিক করুন</a>।";
+            } else if (actionType === 'video') {
+                userPrompt = "আমি পেজের ভেতরেই ভিডিও গাইডটি চালু করতে চাই।";
+                botReply = "নিশ্চয়ই! আপনার জন্য পেজের ভেতরেই ইন-অ্যাপ ভিডিও প্লেয়ারটি চালু করা হচ্ছে। অনুগ্রহ করে মনোযোগ দিয়ে সম্পূর্ণ ভিডিওটি দেখুন।";
+                triggerTask = () => setTimeout(openVideoModal, 1000);
+            } else if (actionType === 'email') {
+                userPrompt = "আমার পাসওয়ার্ড/অন্যান্য সমস্যা হচ্ছে, মেইল করব।";
+                botReply = "যেকোনো টেকনিক্যাল ত্রুটির জন্য সরাসরি <a href='mailto:support@dainikprotichobi.com' class='text-red-600 underline font-bold'>support@dainikprotichobi.com</a> ঠিকানায় আপনার রিপোর্টার আইডি সহ মেইল করুন। আমাদের সাপোর্ট টিম দ্রুত রিপ্লাই দেবে।";
             }
 
-            // Append User Message UI Bubble
-            appendMessage(userText, 'user');
+            appendChatBubble(userPrompt, 'user');
 
-            // Append Bot Response UI Bubble with delay for realism
             setTimeout(() => {
-                appendMessage(botResponse, 'bot');
-                
-                // Trigger auto tab redirections if needed
-                if (redirectUrl) {
-                    setTimeout(() => {
-                        window.open(redirectUrl, '_blank');
-                    }, 1200);
-                }
+                appendChatBubble(botReply, 'bot');
+                if(triggerTask) triggerTask();
             }, 600);
         }
 
-        // Helper function to dynamically build chat message nodes
-        function appendMessage(text, sender) {
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `flex items-start space-x-2 space-x-reverse ${sender === 'user' ? 'justify-end' : ''}`;
+        function appendChatBubble(text, role) {
+            const row = document.createElement('div');
+            row.className = `flex items-start space-x-2 space-x-reverse ${role === 'user' ? 'justify-end' : ''}`;
             
-            let avatarHtml = sender === 'bot' 
-                ? `<div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-robot"></i></div>`
-                : '';
-                
-            let bubbleClass = sender === 'user'
-                ? 'bg-red-600 text-white rounded-xl rounded-tl-none shadow-sm max-w-[85%] p-3'
-                : 'bg-white text-gray-700 rounded-xl rounded-tr-none shadow-sm border border-gray-100 max-w-[85%] p-3 leading-relaxed';
+            let icon = role === 'bot' ? `<div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-[10px] shrink-0"><i class="fa-solid fa-robot"></i></div>` : '';
+            let style = role === 'user' ? 'bg-red-600 text-white rounded-xl rounded-tl-none p-3 max-w-[85%]' : 'bg-white text-gray-700 rounded-xl rounded-tr-none p-3 max-w-[85%] shadow-sm border border-slate-100 leading-relaxed';
 
-            msgDiv.innerHTML = `
-                ${avatarHtml}
-                <div class="${bubbleClass}">
-                    ${text}
-                </div>
-            `;
-            
-            chatMessages.appendChild(msgDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight; // Auto Scroll To Bottom
+            row.innerHTML = `${icon}<div class="${style}">${text}</div>`;
+            chatMessages.appendChild(row);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
     </script>
 </body>
