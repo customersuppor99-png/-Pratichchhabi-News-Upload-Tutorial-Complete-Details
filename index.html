@@ -1,393 +1,349 @@
 <!DOCTYPE html>
-<html lang="bn" class="scroll-smooth">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>দৈনিক প্রতিচ্ছবি | প্রো-জার্নালিস্ট কমান্ড সেন্টার</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <title>নির্দেশিকা ও প্রশ্নোত্তর - দৈনিক প্রতিচ্ছবি</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts for Bengali -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind_Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            dark: '#050509',
-                            card: '#0c0c14',
-                            primary: '#3b82f6', // blue-500
-                            secondary: '#8b5cf6', // violet-500
-                            accent: '#22d3ee', // cyan-400
-                            success: '#10b981', // emerald-500
-                        }
-                    },
-                    animation: {
-                        'gradient-x': 'gradient-x 15s ease infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        'gradient-x': {
-                            '0%, 100%': { 'background-position': '200% 50%' },
-                            '50%': { 'background-position': '0% 50%' },
-                        },
-                        'float': {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f8fafc;
         }
-    </script>
-
-    <style type="text/tailwindcss">
-        @layer components {
-            .glass-card {
-                @apply bg-brand-card/60 backdrop-blur-xl border border-white/5 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
-            }
-            .btn-primary {
-                @apply bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-8 py-3 rounded-full hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 relative overflow-hidden;
-            }
-            .btn-primary::before {
-                @apply content-[''] absolute top-0 -left-full w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500;
-            }
-            .btn-primary:hover::before {
-                @apply left-full;
-            }
-            .btn-whatsapp {
-                @apply bg-brand-success text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-brand-success/20 hover:bg-emerald-600 transition-all duration-300 flex items-center gap-3 transform hover:scale-105;
-            }
-            .nav-link {
-                @apply text-sm text-gray-300 hover:text-white transition-colors relative pb-1;
-            }
-            .nav-link::after {
-                @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-brand-accent transition-all duration-300;
-            }
-            .nav-link:hover::after {
-                @apply w-full;
-            }
-            .chat-bubble-bot {
-                @apply bg-brand-card text-gray-200 p-4 rounded-2xl rounded-bl-none max-w-[85%] border border-white/5 shadow-inner;
-            }
-            .chat-bubble-user {
-                @apply bg-brand-primary text-white p-4 rounded-2xl rounded-br-none max-w-[85%] ml-auto shadow-lg shadow-brand-primary/20;
-            }
+        .gradient-brand {
+            background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
         }
     </style>
 </head>
-<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-accent/30 custom-scrollbar overflow-x-hidden">
+<body class="text-gray-800 antialiased">
 
-    <div class="fixed inset-0 z-0 opacity-20">
-        <div class="absolute w-2 h-2 bg-white rounded-full top-1/4 left-1/4 animate-pulse-slow"></div>
-        <div class="absolute w-3 h-3 bg-brand-primary rounded-full top-1/2 left-3/4 animate-float"></div>
-        <div class="absolute w-2 h-2 bg-brand-secondary rounded-full top-3/4 left-1/2 animate-pulse"></div>
-    </div>
-
-    <header class="sticky top-0 z-50 bg-brand-dark/80 backdrop-blur-lg border-b border-white/5">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform">
-                    <span class="text-2xl font-bold">দ</span>
-                </div>
-                <span class="text-2xl font-extrabold tracking-tighter">দৈনিক<span class="text-brand-primary">প্রতিচ্ছবি</span><span class="text-xs text-gray-500 ml-1">PRO</span></span>
-            </a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#tools" class="nav-link">টুলস</a>
-                <a href="#support" class="nav-link">সাপোর্ট</a>
-                <a href="#ai" class="nav-link">এআই কমান্ড</a>
+    <!-- Header / Hero Section -->
+    <header class="gradient-brand text-white py-12 px-4 shadow-lg text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-block bg-red-700/50 text-red-200 text-sm px-4 py-1.5 rounded-full font-semibold mb-4 border border-red-500/30">
+                <i class="fa-solid fa-bullhorn mr-1.5 animate-pulse"></i> অফিসিয়াল নির্দেশিকা পোর্টাল
             </div>
-            <a href="https://dailybanglarpraticchabi.com/signin/" class="btn-primary text-sm flex items-center gap-2">
-                <i class="fas fa-lock text-xs"></i> লগইন পোর্টাল
-            </a>
-        </nav>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 tracking-wide drop-shadow-sm">দৈনিক প্রতিচ্ছবি</h1>
+            <p class="text-xl md:text-2xl font-medium text-red-100 mb-2">সম্মানিত গণমাধ্যম কর্মীদের জন্য গুরুত্বপূর্ণ নির্দেশনা ও প্রশ্নোত্তর</p>
+            <p class="text-sm md:text-base text-red-200/90 max-w-xl mx-auto mt-4 border-t border-red-700 pt-4">
+                আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ। দৈনিক প্রতিচ্ছবির পক্ষ থেকে আপনাকে আন্তরিক স্বাগতম। নিচে উল্লেখিত নির্দেশনাবলী দয়া করে মনোযোগ সহকারে পড়ুন ও বুঝুন।
+            </p>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6 py-16 relative z-10">
-        <section class="text-center mb-24" data-aos="fade-up">
-            <div class="inline-flex items-center gap-2 bg-brand-card px-4 py-1 rounded-full border border-white/5 mb-6 shadow-inner">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
-                </span>
-                <span class="text-xs text-gray-400 uppercase tracking-widest">নেক্সট-জেন জার্নালিজম প্ল্যাটফর্ম</span>
-            </div>
-            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-[0.95]">
-                আপনার সংবাদ,<span class="block bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary bg-clip-text text-transparent animate-gradient-x bg-[length:200%_auto]">আধুনিক প্রযুক্তিতে।</span>
-            </h1>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
-                দৈনিক প্রতিচ্ছবি প্রো-পোর্টাল হলো বিশ্বের সবচেয়ে উন্নত সাংবাদিকতা কমান্ড সেন্টার। আর্টিফিশিয়াল ইন্টেলিজেন্স এবং ক্লাউড প্রযুক্তির সমন্বয়ে আপনার সংবাদ প্রকাশ হবে মুহূর্তেই।
-            </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a href="#tools" class="btn-primary text-lg">কাজ শুরু করুন <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                <a href="https://youtu.be/V-KeJqePIeU?si=nMHkwMu4biQzW-_g" target="_blank" class="text-gray-300 hover:text-white flex items-center gap-2 group transition-colors">
-                    <i class="fab fa-youtube text-red-500 text-2xl group-hover:scale-110 transition-transform"></i> ভিডিও গাইড দেখুন
-                </a>
-            </div>
-        </section>
-
-        <div class="grid lg:grid-cols-3 gap-10">
-            <div class="lg:col-span-2 space-y-10">
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left 2 Columns: Guidelines & FAQs -->
+        <div class="lg:col-span-2 space-y-12">
+            
+            <!-- Section 1: How to Upload News -->
+            <section class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-3 space-x-reverse mb-6 border-b border-gray-100 pb-4">
+                    <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-600 text-xl shadow-inner">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-950">কীভাবে সংবাদ আপলোড করবেন?</h2>
+                </div>
                 
-                <section id="tools" data-aos="fade-right">
-                    <div class="glass-card p-10 relative overflow-hidden group">
-                        <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-primary/10 rounded-full blur-[100px] group-hover:bg-brand-primary/20 transition-colors"></div>
-                        
-                        <div class="relative z-10">
-                            <h2 class="text-4xl font-extrabold tracking-tighter mb-4">কমান্ড সেন্টার</h2>
-                            <p class="text-gray-400 mb-10 max-w-xl">আপনার অ্যাকাউন্ট লাইভ আছে। সংবাদ প্রকাশ এবং পরিচালনার জন্য নিচের অত্যাধুনিক টুলসগুলো ব্যবহার করুন।</p>
-                            
-                            <div class="grid sm:grid-cols-2 gap-6">
-                                <a href="https://dailybanglarpraticchabi.com/signin/" class="bg-brand-dark/50 border border-white/5 p-8 rounded-3xl group transition-all duration-300 hover:border-brand-primary/30 hover:shadow-2xl hover:shadow-brand-primary/10 flex flex-col justify-between h-64">
-                                    <div>
-                                        <div class="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center mb-6 border border-brand-primary/20 group-hover:scale-110 transition-transform">
-                                            <i class="fas fa-server text-3xl text-brand-primary"></i>
-                                        </div>
-                                        <h3 class="text-2xl font-bold tracking-tight">ড্যাশবোর্ড লগইন</h3>
-                                        <p class="text-sm text-gray-500 mt-2">রিয়েল-টাইম নিউজ পাবলিশিং সিস্টেম ও এআই রাইটিং অ্যাসিস্ট্যান্ট।</p>
-                                    </div>
-                                    <span class="text-brand-primary text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">প্রবেশ করুন <i class="fas fa-chevron-right text-xs"></i></span>
-                                </a>
-                                
-                                <a href="https://youtu.be/V-KeJqePIeU?si=nMHkwMu4biQzW-_g" target="_blank" class="bg-brand-dark/50 border border-white/5 p-8 rounded-3xl group transition-all duration-300 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-500/10 flex flex-col justify-between h-64">
-                                    <div>
-                                        <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6 border border-red-500/20 group-hover:scale-110 transition-transform">
-                                            <i class="fab fa-youtube text-3xl text-red-500"></i>
-                                        </div>
-                                        <h3 class="text-2xl font-bold tracking-tight">ভিডিও টিউটোরিয়াল</h3>
-                                        <p class="text-sm text-gray-500 mt-2">কিভাবে প্রফেশনাল নিউজ আপলোড করবেন তার সম্পূর্ণ গাইডলাইন।</p>
-                                    </div>
-                                    <span class="text-red-500 text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">এখনই দেখুন <i class="fas fa-play text-xs"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="support" data-aos="fade-right" data-aos-delay="100">
-                    <div class="glass-card p-10 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiN3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwaDQwdjQwSDBWMHptMjAgMjBoMjB2MjBIMjBWMjB6TTAgMjBoMjB2MjBIMFYyMHoyMCAwaDIwdjIwSDIwVjB6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-                        <div class="relative z-10 flex flex-col md:flex-row md:items-center gap-10">
-                            <div class="flex-1">
-                                <div class="inline-flex items-center gap-2 bg-brand-success/10 px-3 py-1 rounded-full border border-brand-success/20 mb-4">
-                                    <i class="fab fa-whatsapp text-brand-success text-xs"></i>
-                                    <span class="text-xs text-brand-success font-semibold tracking-wide uppercase">হিউম্যান সাপোর্ট</span>
-                                </div>
-                                <h2 class="text-4xl font-extrabold tracking-tighter mb-4">জরুরি কারিগরি সহায়তা</h2>
-                                <p class="text-gray-300 leading-relaxed mb-8 italic font-light border-l-2 border-brand-success/30 pl-6">
-                                    "আপনার যে কোন প্রয়োজনে এবং যেকোনো সহযোগিতার জন্য অনুগ্রহ করে যে কোন সমস্যা হলে আমাদের হোয়াটসঅ্যাপে বিস্তারিত লিখে স্ক্রিনশট সহ এবং ভয়েস সহ পাঠিয়ে দিবেন। নির্দিষ্ট সময়ের মধ্যে সহযোগিতা করা হবে এবং জানিয়ে দেয়া হবে সমস্যাটি সমাধান করে দেয়া হবে।"
-                                </p>
-                            </div>
-                            <div class="flex-shrink-0 text-center">
-                                <div class="w-32 h-32 bg-brand-card rounded-full flex items-center justify-center mb-6 mx-auto shadow-2xl border-4 border-white/5 p-2">
-                                    <img src="https://api.dicebear.com/8.x/avataaars/svg?seed=support" alt="Support" class="w-full h-full rounded-full">
-                                </div>
-                                <a href="https://wa.me/8801750328870" target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp text-2xl"></i> হোয়াটসঅ্যাপ
-                                </a>
-                                <p class="text-xs text-gray-600 mt-4 tracking-wider">01750328870</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <aside id="ai" class="lg:col-span-1" data-aos="fade-left">
-                <div class="glass-card h-[750px] flex flex-col overflow-hidden sticky top-28 border border-brand-primary/20 shadow-brand-primary/5 shadow-2xl">
-                    <div class="p-6 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary bg-[length:200%_auto] animate-gradient-x flex justify-between items-center shadow-lg">
-                        <div class="flex items-center gap-3">
-                            <div class="relative">
-                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
-                                    <i class="fas fa-robot text-2xl text-white"></i>
-                                </div>
-                                <span class="absolute bottom-0 right-0 w-3 h-3 bg-brand-accent rounded-full border-2 border-brand-dark animate-pulse"></span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-lg leading-tight text-white">প্রতিচ্ছবি AI প্রো</h3>
-                                <p class="text-xs text-white/70">অ্যাডভান্সড নিউরাল নেটওয়ার্ক</p>
-                            </div>
-                        </div>
-                        <button class="text-white/70 hover:text-white"><i class="fas fa-ellipsis-v"></i></button>
+                <!-- Steps Container -->
+                <div class="relative border-r-2 border-gray-100 mr-4 pr-6 space-y-8">
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">১</span>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">অ্যাকাউন্টে লগইন</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">আপনার নিবন্ধিত মোবাইল নম্বর ও তথ্য ব্যবহার করে পোর্টালে লগইন সম্পন্ন করুন।</p>
+                        <a href="https://dainikprotichobi.com/login/" target="_blank" class="inline-flex items-center text-sm font-semibold text-red-600 bg-red-50 hover:bg-red-100 px-4 py-2 rounded-lg transition-colors group">
+                            লগইন/নিবন্ধন লিংক <i class="fa-solid fa-arrow-up-right-from-square mr-2 text-xs transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"></i>
+                        </a>
                     </div>
                     
-                    <div id="chatBox" class="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar bg-brand-dark/30 text-sm font-light leading-relaxed">
-                        <div class="flex items-start gap-3 bot-msg" data-aos="fade-in">
-                            <img src="https://api.dicebear.com/8.x/bottts-neutral/svg?seed=ai" alt="AI" class="w-8 h-8 rounded-full bg-brand-card border border-white/5">
-                            <div class="chat-bubble-bot">
-                                আসসালামু আলাইকুম! সম্মানিত প্রতিনিধি, আমি দৈনিক প্রতিচ্ছবি পোর্টালের <b class="text-brand-accent font-semibold">এআই প্রো</b> অ্যাসিস্ট্যান্ট। আমি অত্যাধুনিক নিউরাল নেটওয়ার্ক ব্যবহার করে আপনাকে সাহায্য করতে প্রস্তুত। আপনার যেকোনো প্রশ্ন বা জিজ্ঞাসা এখানে লিখুন।
-                            </div>
-                        </div>
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">২</span>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">পদবী নিশ্চিতকরণ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">লগইন হওয়ার পর আপনার অ্যাকাউন্ট ভেরিফাইড থাকলে ড্যাশবোর্ডে স্পষ্ট অক্ষরে <span class="bg-green-50 text-green-700 font-semibold px-2 py-0.5 rounded border border-green-200">"গণমাধ্যম কর্মী"</span> লেখা দেখতে পাবেন।</p>
                     </div>
 
-                    <div class="p-4 bg-brand-card/80 border-t border-white/5 backdrop-blur-lg">
-                        <div class="flex gap-3 bg-brand-dark rounded-full p-1 border border-white/5 focus-within:border-brand-primary focus-within:ring-1 focus-within:ring-brand-primary transition-all">
-                            <input id="userInput" type="text" placeholder="কমান্ড টাইপ করুন..." class="flex-1 bg-transparent text-white px-5 py-3 rounded-full focus:outline-none placeholder:text-gray-600 placeholder:text-sm">
-                            <button onclick="handleChat()" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white w-12 h-12 rounded-full flex items-center justify-center hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all transform hover:scale-105 active:scale-95">
-                                <i class="fas fa-paper-plane text-sm"></i>
-                            </button>
-                        </div>
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">৩</span>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">রাইটার অপশন অ্যাক্সেস</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">সফলভাবে ভেরিফিকেশন চেক পাসের পর নিচে <span class="font-semibold text-gray-950">"আর্টিকেল লেখক"</span> এবং অন্যান্য মেনু প্রদর্শিত হবে।</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative">
+                        <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">৪</span>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">আর্টিকেল লিখন ও প্রকাশ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">নির্ধারিত <span class="text-red-600 font-semibold">"আর্টিকেল লিখুন"</span> বাটনে ক্লিক করে সমস্ত প্রয়োজনীয় তথ্য ইনপুট দিন এবং নীতিমালা মেনে সংবাদ প্রকাশ করুন।</p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative">
+                        <span class="absolute -right-[35px] top-0 w-6 h-6 rounded-full bg-red-600 text-white text-xs font-bold flex items-center justify-center shadow-md">৫</span>
+                        <h3 class="font-bold text-lg text-gray-950 mb-1">ফটো কার্ড ও অতিরিক্ত ফিচার</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">সংবাদটি সফলভাবে প্রকাশ হওয়ার পর আপনি আকর্ষণীয় ডিজিটাল ফটো কার্ড জেনারেট করাসহ অন্যান্য প্রিমিয়াম সুবিধা উপভোগ করতে পারবেন।</p>
                     </div>
                 </div>
-            </aside>
+            </section>
+
+            <!-- Section 2: Video Tutorial -->
+            <section class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -left-16 -bottom-16 w-44 h-44 bg-red-600/10 rounded-full blur-2xl"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-center md:text-right">
+                        <div class="flex items-center justify-center md:justify-start space-x-2 space-x-reverse mb-2 text-red-500">
+                            <i class="fa-solid fa-circle-play text-xl animate-pulse"></i>
+                            <span class="text-xs uppercase font-bold tracking-wider">ভিডিও গাইড</span>
+                        </div>
+                        <h2 class="text-xl md:text-2xl font-bold mb-2">সম্পূর্ণ ভিডিও টিউটোরিয়াল</h2>
+                        <p class="text-slate-400 text-sm max-w-md">সংবাদ আপলোডের পুরো প্রক্রিয়াটি প্র্যাক্টিক্যালি দেখতে ও সহজে বুঝতে আমাদের শর্টস টিউটোরিয়ালটি দেখে নিন।</p>
+                    </div>
+                    <a href="https://youtube.com/shorts/Uk0rzZGjrpU?si=CPjZgRr2T9gQDAR0" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 inline-flex items-center whitespace-nowrap">
+                        <i class="fa-brands fa-youtube text-lg mr-2"></i> ভিডিওটি দেখুন
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section 3: FAQs -->
+            <section class="space-y-4">
+                <div class="flex items-center space-x-3 space-x-reverse mb-6">
+                    <div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-600 text-xl shadow-inner">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-950">প্রায় জিজ্ঞাসিত প্রশ্ন (FAQ)</h2>
+                </div>
+
+                <!-- FAQ Accordion Container -->
+                <div class="space-y-3">
+                    <!-- Q1 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">১.</span> দৈনিক কয়টি সংবাদ প্রকাশ করা যাবে?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">একজন গণমাধ্যম কর্মী প্রতিদিন সর্বোচ্চ ২-৩টি সংবাদ প্রকাশ করতে পারবেন। তবে জাতীয় বা বিশেষ পরিস্থিতির প্রয়োজন অনুযায়ী কর্তৃপক্ষ যেকোনো সময় এই নীতিমালা পরিবর্তন বা পরিবর্ধন করতে পারে।</p>
+                    </div>
+                    <!-- Q2 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">২.</span> আমার অ্যাকাউন্ট এখনো ভেরিফাই হয়নি, কেন?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">চিন্তার কোনো কারণ নেই। সাধারণত তথ্য জমা দেওয়ার ২৪ থেকে ৭২ ঘণ্টার মধ্যে আমাদের ব্যাক-এন্ড টিম যাচাইবাছাই সম্পন্ন করে অ্যাকাউন্ট স্বয়ংক্রিয়ভাবে ভেরিফাই করে দেয়। ভেরিফিকেশন শেষ হলেই আপনি সংবাদ সাবমিট করতে পারবেন।</p>
+                    </div>
+                    <!-- Q3 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৩.</span> পাসওয়ার্ড ভুলে গেলে আমার করণীয় কী?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">পাসওয়ার্ড পুনরুদ্ধার করতে ওয়েবসাইটের নিচে দেওয়া আমাদের অফিসিয়াল ই-মেইল ঠিকানায় আপনার নিবন্ধিত মোবাইল নম্বর, নাম ও আইডির বিবরণসহ একটি মেইল করুন। সিকিউরিটি টিম যাচাই শেষে দ্রুত আপনাকে নতুন অ্যাক্সেস কোড প্রদান করবে।</p>
+                    </div>
+                    <!-- Q4 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৪.</span> কোনো টেকনিক্যাল সমস্যায় পড়লে তাৎক্ষণিক সহযোগিতা কীভাবে পাব?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">যেকোনো সিস্টেম বা টেকনিক্যাল ত্রুটির মুখোমুখি হলে স্ক্রিনশটসহ সমস্যার বিস্তারিত লিখে আমাদের অফিসিয়াল ই-মেইলে পাঠান। আমাদের টেকনিক্যাল সাপোর্ট টিম অতি দ্রুত বিষয়টির স্থায়ী সমাধান নিশ্চিত করবে।</p>
+                    </div>
+                    <!-- Q5 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৫.</span> WhatsApp-এ রেসপন্স পেতে দেরি হওয়ার কারণ কী?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">আমাদের WhatsApp নম্বরটি সরাসরি সেন্ট্রাল ওয়েবসাইটের সাথে যুক্ত। নিয়মিত নিরাপত্তাজনিত আপডেট, গেটওয়ে সীমাবদ্ধতা এবং একসাথে অসংখ্য বার্তার চাপ থাকার কারণে চ্যাটে তাৎক্ষণিক উত্তর দেওয়া সম্ভব হয় না। তাই যেকোনো গুরুত্বপূর্ণ বা অফিশিয়াল প্রয়োজনে সরাসরি ই-মেইল ব্যবহার করা সবচেয়ে নির্ভরযোগ্য মাধ্যম।</p>
+                    </div>
+                    <!-- Q6 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৬.</span> সংবাদ সংগ্রহ করতে গিয়ে স্থানীয় ফিল্ডে সমস্যায় পড়লে কী করণীয়?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">যেহেতু আপনি <b>দৈনিক প্রতিচ্ছবি</b> পরিবারে নতুন, তাই মাঠপর্যায়ে তথ্য সংগ্রহের ক্ষেত্রে শতভাগ সরকারি ও প্রাতিষ্ঠানিক নিয়ম-নীতিমালা কঠোরভাবে মেনে চলুন। যেকোনো ঝুঁকিপূর্ণ বা স্পর্শকাতর ও প্রশাসনিক নিউজ কভার করার আগে অতিরিক্ত সতর্কতা অবলম্বন করুন। আমরা পরামর্শ দেব—জরুরি সহায়তার স্বার্থে আপনি যত দ্রুত সম্ভব আপনার স্থানীয় প্রেসক্লাবের সদস্যপদ গ্রহণ করুন। যেকোনো অনাকাঙ্ক্ষিত পরিস্থিতিতে স্থানীয় প্রেসক্লাব ও আইন-শৃঙ্খলা রক্ষাকারী বাহিনীর আইনি সাহায্য নিন। অত্যন্ত গুরুতর সমস্যা হলে মূল অফিসে ই-মেইলের মাধ্যমে লিখিত রিপোর্ট করুন। মনে রাখবেন, আপনার পেশাদারী নিরাপত্তার বিষয়টি আমাদের কাছে সবচেয়ে অগ্রাধিকার পায়।</p>
+                    </div>
+                    <!-- Q7 -->
+                    <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-5 transition-all hover:border-gray-200">
+                        <h4 class="font-bold text-gray-950 text-base flex items-start"><span class="text-red-600 ml-2 font-black">৭.</span> দৈনিক প্রতিচ্ছবির ভবিষ্যৎ পরিকল্পনা কী?</h4>
+                        <p class="text-gray-600 text-sm mt-2 mr-5 leading-relaxed bg-slate-50 p-3 rounded-lg border border-slate-100">আমরা খুব শীঘ্রই আমাদের মূল পোর্টালে একটি ডেডিকেটেড সেকশনে সংস্থার মূল উদ্দেশ্য, ভিশন, সাংবাদিকতার সম্পাদকীয় নীতিমালা, Privacy Policy এবং বিস্তারিত Terms & Conditions উন্মুক্ত করতে যাচ্ছি যা আমাদের সাংবাদিকতাকে আরও স্বচ্ছ করবে।</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <section class="mt-24 text-center glass-card p-10" data-aos="fade-up">
-            <h4 class="text-xs text-gray-600 uppercase tracking-widest mb-6">Powered by Industry Leading Technologies</h4>
-            <div class="flex flex-wrap gap-10 justify-center items-center opacity-40 hover:opacity-100 transition-opacity">
-                <i class="fab fa-google text-3xl hover:text-white transition-colors"></i>
-                <i class="fab fa-aws text-3xl hover:text-white transition-colors"></i>
-                <i class="fab fa-microsoft text-3xl hover:text-white transition-colors"></i>
-                <i class="fab fa-react text-3xl hover:text-white transition-colors"></i>
-                <i class="fab fa-node-js text-3xl hover:text-white transition-colors"></i>
-                <i class="fab fa-docker text-3xl hover:text-white transition-colors"></i>
+        <!-- Right 1 Column: Important Rules & Meta info -->
+        <div class="space-y-6">
+            
+            <!-- Professional Guidelines Card -->
+            <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200/60 shadow-sm">
+                <h3 class="font-bold text-amber-950 text-lg mb-4 flex items-center"><i class="fa-solid fa-triangle-exclamation text-amber-600 ml-2"></i> সাংবাদিকতার নৈতিক নীতিমালা</h3>
+                <ul class="space-y-3 text-amber-900 text-sm leading-relaxed">
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> সর্বদা সঠিক ও নির্ভরযোগ্য সোর্সের তথ্যের ভিত্তিতে সংবাদ রচনা করুন।</li>
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> হলুদ সাংবাদিকতা, বিভ্রান্তিকর হেডলাইন বা কপিরাইট লঙ্ঘনকারী কোনো কন্টেন্ট প্রকাশ থেকে সম্পূর্ণ বিরত থাকুন।</li>
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> সকল প্রকার সংবাদ প্রকাশের ক্ষেত্রে গণমাধ্যম নীতিমালা ও দেশের প্রচলিত ডিজিটাল নিরাপত্তা ও প্রেস আইন মেনে চলুন।</li>
+                    <li class="flex items-start"><i class="fa-solid fa-square-check text-amber-600 ml-2 mt-1 text-xs"></i> ভুল বা আপত্তিজনক তথ্যের প্রমাণ মিললে কর্তৃপক্ষ যেকোনো সংবাদ পর্যালোচনা, সম্পাদনা বা অপসারণের পূর্ণ অধিকার সংরক্ষণ করে।</li>
+                </ul>
             </div>
-        </section>
 
+            <!-- AI Helper Promo Box -->
+            <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-xl mx-auto mb-3">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3 class="font-bold text-gray-950 text-md mb-1">কিছুই বুঝতে পারছেন না?</h3>
+                <p class="text-gray-500 text-xs mb-4">প্রথমে আমাদের ভিডিও গাইডলাইনটি ভালো করে দেখুন। এরপরও জটিলতা থাকলে ডানপাশের চ্যাটবটের সাহায্য নিন।</p>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-brand-card/50 border-t border-white/5 py-12 mt-16 relative z-10">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-500 text-sm">© ২০২৬ দৈনিক প্রতিচ্ছবি। সর্বস্বত্ব সংরক্ষিত।</p>
-            <p class="text-[11px] mt-3 uppercase tracking-widest text-gray-700">ডিজিটাল ইকোসিস্টেম আর্কিটেকচার বাই: <span class="text-gray-600 font-semibold">গ্লোবাল মিডিয়া টেক সলিউশনস (ক্যালিফোর্নিয়া)</span></p>
-        </div>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 px-4 border-t border-slate-800 text-center text-sm mt-12">
+        <p class="text-white font-medium mb-2">দৈনিক প্রতিচ্ছবি</p>
+        <p class="text-xs mb-4">সত্যের পথে, বস্তুনিষ্ঠ সংবাদ প্রকাশে প্রতিশ্রুতিবদ্ধ।</p>
+        <p class="text-xs text-slate-500">&copy; 2026 দৈনিক প্রতিচ্ছবি. অল রাইটস রিজার্ভড।</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ================= CHAT SYSTEM WIDGET ================= -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Chat Toggle Button -->
+        <button id="chatToggleBtn" class="w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-105 cursor-pointer relative group">
+            <i id="chatIcon" class="fa-solid fa-comments text-xl transition-transform duration-300"></i>
+            <span class="absolute -top-1 -left-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></span>
+        </button>
+
+        <!-- Chat Window Container -->
+        <div id="chatWindow" class="hidden absolute bottom-18 right-0 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col transition-all duration-300 transform scale-95 origin-bottom-right">
+            <!-- Chat Header -->
+            <div class="gradient-brand p-4 text-white flex items-center justify-between">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="relative">
+                        <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold">DP</div>
+                        <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-red-800"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">প্রতিচ্ছবি অ্যাসিস্ট্যান্ট</h4>
+                        <p class="text-[10px] text-red-200 flex items-center"><i class="fa-solid fa-circle text-[6px] text-green-400 ml-1"></i> অনলাইন (অটোমেটেড)</p>
+                    </div>
+                </div>
+                <button id="closeChatBtn" class="text-white/70 hover:text-white text-sm cursor-pointer p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <!-- Chat Area (Messages Display) -->
+            <div id="chatMessages" class="p-4 flex-1 h-72 overflow-y-auto space-y-3 bg-slate-50 text-xs md:text-sm">
+                <!-- Welcome Message from System -->
+                <div class="flex items-start space-x-2 space-x-reverse">
+                    <div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-robot"></i></div>
+                    <div class="bg-white p-3 rounded-xl rounded-tr-none shadow-sm border border-gray-100 max-w-[85%] text-gray-700 leading-relaxed">
+                        আসসালামু আলাইকুম! <b>দৈনিক প্রতিচ্ছবি</b> সাপোর্ট অ্যাসিস্ট্যান্টে আপনাকে স্বাগতম। আপনার সুবিধার্থে নিচের কুইক অপশনগুলো তৈরি করা হয়েছে। যেকোনো একটিতে ক্লিক করুন:
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Interactive Buttons -->
+            <div class="p-3 bg-white border-t border-gray-100 grid grid-cols-1 gap-2">
+                <button onclick="handleBotAction('login')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-gray-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
+                    <span><i class="fa-solid fa-right-to-bracket text-red-600 ml-2"></i> পোর্টালে লগইন করতে চাই</span>
+                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
+                </button>
+                <button onclick="handleBotAction('video')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-gray-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
+                    <span><i class="fa-brands fa-youtube text-red-600 ml-2"></i> ভিডিও টিউটোরিয়াল দেখতে চাই</span>
+                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
+                </button>
+                <button onclick="handleBotAction('issue')" class="w-full text-right bg-slate-50 hover:bg-red-50 hover:text-red-700 text-gray-700 p-2.5 rounded-xl border border-gray-200 text-xs font-semibold transition-colors flex items-center justify-between cursor-pointer group">
+                    <span><i class="fa-solid fa-circle-exclamation text-red-600 ml-2"></i> পাসওয়ার্ড/টেকনিক্যাল সমস্যা</span>
+                    <i class="fa-solid fa-chevron-left text-[10px] text-gray-400 group-hover:text-red-600"></i>
+                </button>
+            </div>
+            
+            <!-- Bottom Footer Note -->
+            <div class="bg-slate-50 px-4 py-2 text-[10px] text-center text-gray-400 border-t border-gray-100">
+                যেকোনো জরুরি প্রয়োজনে অফিসিয়াল ই-মেইল করুন।
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript code for Chat Widget Functionality -->
     <script>
-        // Initialize AOS (Animate On Scroll)
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false,
+        const chatToggleBtn = document.getElementById('chatToggleBtn');
+        const chatWindow = document.getElementById('chatWindow');
+        const closeChatBtn = document.getElementById('closeChatBtn');
+        const chatIcon = document.getElementById('chatIcon');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Toggle chat UI visibility open/close
+        chatToggleBtn.addEventListener('click', () => {
+            const isHidden = chatWindow.classList.contains('hidden');
+            if (isHidden) {
+                chatWindow.classList.remove('hidden');
+                setTimeout(() => chatWindow.classList.remove('scale-95', 'opacity-0'), 10);
+                chatIcon.classList.replace('fa-comments', 'fa-chevron-down');
+            } else {
+                closeChat();
+            }
         });
 
-        // AI Logic Script
-        let step = 0;
-        const chatBox = document.getElementById('chatBox');
-        
-        function addMsg(text, isBot) {
-            const div = document.createElement('div');
-            div.className = `flex items-start gap-3 ${isBot ? 'bot-msg' : 'user-msg flex-row-reverse'}`;
+        closeChatBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeChat();
+        });
+
+        function closeChat() {
+            chatWindow.classList.add('hidden');
+            chatIcon.classList.replace('fa-chevron-down', 'fa-comments');
+        }
+
+        // Handle automated chat workflows
+        function handleBotAction(type) {
+            let userText = "";
+            let botResponse = "";
+            let redirectUrl = "";
+
+            if (type === 'login') {
+                userText = "আমি পোর্টালে লগইন করতে চাই।";
+                botResponse = "নিচের লিংকে ক্লিক করে সরাসরি আপনার নিবন্ধিত নম্বর দিয়ে লগইন করুন। অ্যাকাউন্ট ভেরিফাইড হলে সংবাদ আপলোডের অপশন পেয়ে যাবেন।";
+                redirectUrl = "https://dainikprotichobi.com/login/";
+            } else if (type === 'video') {
+                userText = "আমি সংবাদ প্রকাশের সম্পূর্ণ ভিডিও টিউটোরিয়াল দেখতে চাই।";
+                botResponse = "সংবাদ আপলোড ও ফটো কার্ড জেনারেশনের সম্পূর্ণ প্র্যাক্টিক্যাল প্রসেসটি ইউটিউব শর্টস লিংকে দেওয়া আছে। এখনই ভিডিওটি ওপেন করা হচ্ছে...";
+                redirectUrl = "https://youtube.com/shorts/Uk0rzZGjrpU?si=CPjZgRr2T9gQDAR0";
+            } else if (type === 'issue') {
+                userText = "আমার পাসওয়ার্ড বা টেকনিক্যাল সমস্যা হচ্ছে।";
+                botResponse = "নিরাপত্তাজনিত কারণে পাসওয়ার্ড বা ভেরিফিকেশনের যেকোনো সমস্যার জন্য আমাদের অফিসিয়াল ই-মেইলে (যা ওয়েবসাইটের নিচে ফুটারে যুক্ত আছে) সরাসরি মেইল করুন। মেইলে আপনার আইডি বা নিবন্ধিত ফোন নম্বর উল্লেখ করতে ভুলবেন না।";
+            }
+
+            // Append User Message UI Bubble
+            appendMessage(userText, 'user');
+
+            // Append Bot Response UI Bubble with delay for realism
+            setTimeout(() => {
+                appendMessage(botResponse, 'bot');
+                
+                // Trigger auto tab redirections if needed
+                if (redirectUrl) {
+                    setTimeout(() => {
+                        window.open(redirectUrl, '_blank');
+                    }, 1200);
+                }
+            }, 600);
+        }
+
+        // Helper function to dynamically build chat message nodes
+        function appendMessage(text, sender) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex items-start space-x-2 space-x-reverse ${sender === 'user' ? 'justify-end' : ''}`;
             
-            const avatar = isBot ? 
-                `<img src="https://api.dicebear.com/8.x/bottts-neutral/svg?seed=ai" alt="AI" class="w-8 h-8 rounded-full bg-brand-card border border-white/5">` :
-                `<img src="https://api.dicebear.com/8.x/avataaars/svg?seed=user" alt="User" class="w-8 h-8 rounded-full bg-brand-card border border-white/5">`;
+            let avatarHtml = sender === 'bot' 
+                ? `<div class="w-7 h-7 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-robot"></i></div>`
+                : '';
+                
+            let bubbleClass = sender === 'user'
+                ? 'bg-red-600 text-white rounded-xl rounded-tl-none shadow-sm max-w-[85%] p-3'
+                : 'bg-white text-gray-700 rounded-xl rounded-tr-none shadow-sm border border-gray-100 max-w-[85%] p-3 leading-relaxed';
 
-            const bubbleClass = isBot ? 'chat-bubble-bot' : 'chat-bubble-user';
-
-            div.innerHTML = `
-                ${avatar}
+            msgDiv.innerHTML = `
+                ${avatarHtml}
                 <div class="${bubbleClass}">
                     ${text}
                 </div>
             `;
-            chatBox.appendChild(div);
-            // Smooth scroll to bottom
-            chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: 'smooth' });
+            
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Auto Scroll To Bottom
         }
-
-        function handleChat() {
-            const input = document.getElementById('userInput');
-            const text = input.value.trim();
-            if(!text) return;
-
-            addMsg(text, false); // Add user message
-            input.value = ''; // Clear input
-
-            // Show typing indicator (simple)
-            const typingDiv = document.createElement('div');
-            typingDiv.id = 'typing';
-            typingDiv.className = 'text-xs text-gray-600 ml-12';
-            typingDiv.innerText = 'AI টাইপ করছে...';
-            chatBox.appendChild(typingDiv);
-            chatBox.scrollTo({ top: chatBox.scrollHeight, behavior: 'smooth' });
-
-            setTimeout(() => {
-                // Remove typing indicator
-                const typing = document.getElementById('typing');
-                if(typing) typing.remove();
-
-                // Bot Response Logic
-                if(step === 0) {
-                    addMsg(`সম্মানিত প্রতিনিধি, আপনি কিভাবে সংবাদ আপলোড করবেন এই ভিডিওটি দেখুন সম্পূর্ণ ভিডিও লিংক: <br><a href="https://youtu.be/V-KeJqePIeU?si=nMHkwMu4biQzW-_g" target="_blank" class="text-brand-accent font-semibold underline decoration-dotted">ভিডিও লিংক এখানে</a>`, true);
-                    addMsg(`আর আপনি যে লগইন করবেন আপনার একাউন্টে এই লিংকে ক্লিক করে: <br><a href="https://dailybanglarpraticchabi.com/signin/" class="text-brand-accent font-semibold underline decoration-dotted">লগইন পোর্টাল লিংক</a>`, true);
-                    addMsg(`মনোযোগ দিয়ে শুনুন সম্মানিত ব্যবহারকারী, আপনার একাউন্টে যদি 'পাঠক' লেখা থাকে, তবে আপনার নম্বরটি এই হোয়াটসঅ্যাপে পাঠিয়ে দিন: <br><b class='text-brand-success text-base tracking-wider'><i class='fab fa-whatsapp'></i> 01750328870</b>`, true);
-                    addMsg(`আপনার কি আর কোন প্রশ্ন আছে?`, true);
-                    step = 1;
-                } else if(step === 1) {
-                    addMsg(`হ্যাঁ আপনার প্রশ্নটি বুঝতে পেরেছি। আপনাকে দয়া করে অনুরোধ করা যাচ্ছে আপনি তাহলে এই হোয়াটসঅ্যাপ নাম্বারে প্রশ্নটি স্ক্রিনশট সহ পাঠান। আমরা আপনাকে সম্পূর্ণ উত্তর এবং ডিটেইলস পাঠিয়ে দিব। উপরে তো ভিডিও এবং লগিং এর লিংক রয়েছে।`, true);
-                    addMsg(`আপনার আর কোনো সহযোগিতা প্রয়োজন? আমাদের আধুনিক প্রযুক্তি সবসময় আপনার সেবায় নিয়োজিত।`, true);
-                    step = 2;
-                } else {
-                    addMsg(`দৈনিক প্রতিচ্ছবি পত্রিকা একটি অত্যাধুনিক এবং প্রযুক্তি নির্ভর গণমাধ্যম। যেকোনো কারিগরি বা সাংবাদিকতা সংক্রান্ত প্রয়োজনে আমাদের হোয়াটসঅ্যাপ সাপোর্ট (01750328870) ব্যবহার করুন। আমাদের এআই সিস্টেম এবং হিউম্যান টিম যৌথভাবে আপনার সমস্যা সমাধান করবে। ধন্যবাদ।`, true);
-                }
-            }, 1500 + Math.random() * 500); // Realistic typing delay
-        }
-
-        // Enter key support for chat
-        document.getElementById('userInput').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') handleChat();
-        });
-
-        // Add some fancy particles via CSS (simple version)
-        document.addEventListener('DOMContentLoaded', (event) => {
-            console.log("Protichhobi Pro Portal - Advanced UI Loaded.");
-        });
     </script>
 </body>
 </html>
-<section id="guidelines" class="mt-16" data-aos="fade-up">
-    <div class="glass-card p-10 border-t-4 border-brand-primary">
-        <h2 class="text-4xl font-extrabold tracking-tighter mb-10 flex items-center gap-3">
-            <i class="fas fa-file-contract text-brand-primary"></i> সাংবাদিক নীতিমালা ও নির্দেশিকা
-        </h2>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-brand-dark/40 p-8 rounded-3xl border border-white/5">
-                <h3 class="text-2xl font-bold mb-6 text-brand-accent">১. কারিগরি নির্দেশনাবলী</h3>
-                <ul class="space-y-4 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-image mt-1 text-brand-primary"></i>
-                        <span><b>ছবির সাইজ:</b> আপলোড করার ছবির সাইজ অবশ্যই ১ এমবি (1MB) এর নিচে হতে হবে।</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-ban mt-1 text-red-400"></i>
-                        <span><b>ইমোজি নিষেধ:</b> সংবাদে কোনো প্রকার ইমোজি বা অনাকাঙ্ক্ষিত চিহ্ন ব্যবহার করা সম্পূর্ণ নিষেধ।</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-keyboard mt-1 text-brand-secondary"></i>
-                        <span><b>বাংলা টাইপিং:</b> শুদ্ধ ও মানসম্মত বাংলা ব্যাকরণ অনুসরণ করে সংবাদ লিখতে হবে।</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-brand-dark/40 p-8 rounded-3xl border border-white/5">
-                <h3 class="text-2xl font-bold mb-6 text-brand-primary">২. সরকারি নীতিমালা ও আইন</h3>
-                <ul class="space-y-4 text-gray-300">
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-gavel mt-1 text-brand-accent"></i>
-                        <span><b>ডিজিটাল নিরাপত্তা আইন:</b> গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের ডিজিটাল নিরাপত্তা আইন মেনে বস্তুনিষ্ঠ সংবাদ প্রকাশ করতে হবে।</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-user-shield mt-1 text-brand-accent"></i>
-                        <span><b>তথ্য যাচাই:</b> প্রতিটি সংবাদের সত্যতা যাচাই করুন। গুজব ছড়ানো বা ভুয়া সংবাদ প্রচার থেকে বিরত থাকুন।</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-balance-scale mt-1 text-brand-accent"></i>
-                        <span><b>নিরপেক্ষতা:</b> ব্যক্তিগত মতামত এড়িয়ে চলে নিরপেক্ষ ও দায়িত্বশীল সাংবাদিকতা বজায় রাখুন।</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
